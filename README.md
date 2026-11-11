@@ -184,23 +184,3 @@ import tensorflow as tf
 model = tf.keras.models.load_model('results/outputs/cnn_scratch.keras')
 ```
 
----
-
-## 👥 Team
-
-Group project for **IT2011 – AI & ML**, SLIIT. Six members each built and tuned one model:
-
-| Model | Member |
-|---|---|
-| PCA | [name] |
-| SVM | Navodya T.N. |
-| Random Forest | [name] |
-| K-Means | [name] |
-| CNN (scratch) | [name] |
-| MobileNetV2 | [name] |
-
-Repository maintained by **Thenujaya Mihisara Geeganage** ([GitHub](https://github.com/thenujaya-mihisara)).
-
-## 📄 License
-
-[MIT](LICENSE) (add a `LICENSE` file on GitHub: **Add file → Create new file → name it `LICENSE` → Choose a license template**).

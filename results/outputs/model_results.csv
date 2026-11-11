@@ -1,0 +1,30 @@
+model,variety,val_accuracy,test_accuracy,notes
+SVM,"V1 linear, C=1",0.683,0.627,cv=0.778
+SVM,"V2 RBF, C=1",0.75,0.72,cv=0.84
+SVM,"V3 RBF, C=10",0.75,0.673,cv=0.817
+SVM,"V4 RBF, C=10",0.8,0.833,cv=0.837
+SVM,V5 grid search (histogram),0.783,0.813,cv=0.843
+PCA + SVM check,No PCA,0.7,0.747,variance=1.0
+PCA + SVM check,PCA 50,0.767,0.647,variance=0.66
+PCA + SVM check,PCA 100,0.75,0.673,variance=0.755
+PCA + SVM check,PCA 150,0.8,0.707,variance=0.807
+Random Forest,"V1 100 trees, no depth limit",0.717,0.613,cv=0.782
+Random Forest,"V2 300 trees, depth 20",0.717,0.66,cv=0.79
+Random Forest,"V3 300 trees, depth 20",0.933,0.9,cv=0.921
+Random Forest,"V4 50 trees, no depth limit",0.933,0.9,cv=0.925
+Random Forest,V5 grid search (histogram),0.933,0.9,cv=0.924
+CNN (MobileNetV2),V1 frozen base,0.967,0.94,train=0.972
+CNN (MobileNetV2),V2 fine-tune last 30,0.983,0.947,train=0.983
+CNN (MobileNetV2),V3 fine-tune last 60,0.983,0.947,train=0.986
+CNN (scratch),V1 baseline,0.9,0.947,train=0.932
+CNN (scratch),V2 Dropout 0.5,0.933,0.947,train=0.94
+CNN (scratch),V3 Dropout 0.5 + BatchNorm,0.767,0.8,train=0.939
+CNN (scratch),"V4 baseline, no augmentation",0.95,0.947,train=0.998
+K-Means,"pixels+PCA, k=2",,,"ARI_train=0.11, NMI=0.127, silhouette=0.108, ARI_test=0.124"
+K-Means,"pixels+PCA, k=3",,,"ARI_train=0.21, NMI=0.204, silhouette=0.073, ARI_test=0.099"
+K-Means,"pixels+PCA, k=4",,,"ARI_train=0.145, NMI=0.201, silhouette=0.049, ARI_test=0.125"
+K-Means,"pixels+PCA, k=6",,,"ARI_train=0.182, NMI=0.228, silhouette=0.048, ARI_test=0.137"
+K-Means,"histogram, k=2",,,"ARI_train=0.002, NMI=0.002, silhouette=0.154, ARI_test=0.046"
+K-Means,"histogram, k=3",,,"ARI_train=0.112, NMI=0.104, silhouette=0.152, ARI_test=0.054"
+K-Means,"histogram, k=4",,,"ARI_train=0.1, NMI=0.118, silhouette=0.151, ARI_test=0.058"
+K-Means,"histogram, k=6",,,"ARI_train=0.101, NMI=0.128, silhouette=0.135, ARI_test=0.072"
